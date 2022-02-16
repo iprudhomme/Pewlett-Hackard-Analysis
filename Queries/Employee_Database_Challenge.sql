@@ -1,4 +1,3 @@
--- Use Dictinct with Orderby to remove duplicate rows
 DROP TABLE IF EXISTS retirement_titles;
 
 SELECT
@@ -54,3 +53,8 @@ JOIN titles t on e.emp_no = t.emp_no
 WHERE (birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 AND de.to_date = ('9999-01-01') 
 ORDER BY t.emp_no, t.to_date desc;
+
+SELECT title, COUNT(emp_no) as emp_count 
+FROM mentorship_eligibility
+GROUP BY title;	
+

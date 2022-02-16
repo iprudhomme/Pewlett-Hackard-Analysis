@@ -133,5 +133,18 @@ ON (de.dept_no = d.dept_no)
 group by d.dept_name
 
 
+SELECT * from unique_titles;
+
+
+
+
+
+
+
+
+
+
+
+
 
 		
